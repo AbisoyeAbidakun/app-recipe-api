@@ -13,7 +13,9 @@ class UserManager(BaseUserManager):
     """Manager for users."""
 
     def create_user(self, email, password=None, **extra_fields):
-        """Create, save and return a new user. **extra_field can be provided using keyword args"""
+        """Create, save and return a new user.
+           **extra_field can be provided using keyword args
+        """
         if not email:
             raise ValueError('User must have an email address.')
         user = self.model(email=self.normalize_email(email), **extra_fields)
@@ -30,6 +32,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
 
         return user
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the systerm."""
