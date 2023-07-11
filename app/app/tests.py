@@ -14,7 +14,7 @@ class CalcTests(SimpleTestCase):
 
         """Test adding number together """
 
-        res = calc.add(5,6)
+        res = calc.add(5, 6)
 
         self.assertEqual(res, 11)
 
@@ -22,6 +22,6 @@ class CalcTests(SimpleTestCase):
 
         """Test subtracting number together """
 
-        res = calc.subtract(10,15)
+        res = calc.subtract(10, 15)
 
         self.assertEqual(res, 5)
